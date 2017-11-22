@@ -14,4 +14,7 @@ This is intended to be run on a machine with 3 Pascal Titan Xs
 **run_docker_master.sh** - runs out of memory  
 
 
+### Notes
+in **runme.sh** change GPU IDs and batch size according to system specs
+
 The training occurs on the top half of the model presented here: https://arxiv.org/pdf/1705.00092.pdf
