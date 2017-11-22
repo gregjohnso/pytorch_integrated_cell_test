@@ -10,5 +10,5 @@ run_docker_master.sh - runs runme.sh from a dockerfile built with the Pytorch Ma
 This is intentended to be run on a machine with 3 Pascal Titan Xs
 
 ### Observations
-	run_docker_pyt3.sh - runs fine
-	run_docker_master.sh - runs out of memory
+run_docker_pyt3.sh - runs fine
+run_docker_master.sh - runs out of memory
