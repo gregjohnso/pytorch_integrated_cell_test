@@ -12,3 +12,6 @@ This is intended to be run on a machine with 3 Pascal Titan Xs
 ### Observations
 **run_docker_pyt3.sh** - runs fine  
 **run_docker_master.sh** - runs out of memory  
+
+
+The training occurs on the top half of the model presented here: https://arxiv.org/pdf/1705.00092.pdf
