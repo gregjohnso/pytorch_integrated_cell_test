@@ -1,46 +1,14 @@
-# pytorch_integrated_cell
-Integrated Cell project implemented in pytorch
+## pytorch_integrated_cell_test
 
+test for different versions of pytorch
 
-Readme
+runme.sh - runs the model with dummy data
 
+run_docker_pyt3.sh - runs runme.sh from a dockerfile built with the Pytorch v0.3 branch
+run_docker_master.sh - runs runme.sh from a dockerfile built with the Pytorch Master branch as of approximately 4:00 pm PST on 21/11/2017 
 
-Important files
+This is intentended to be run on a machine with 3 Pascal Titan Xs
 
-	train_model.py
-		Main function
-
-	model_utils.py
-		Misc functions including...
-			Initialization of models, optimizers, loss criteria
-			Assignment of models to different GPUs
-			Saving and loading
-
-		In theory, model parallelization and data parallelization get set on lines 102-105
-
-	models/
-		Definitions for variations on the integrated cell model. Each model consists of four parts:
-			Encoder 
-			Decoder
-			Encoder Discriminator
-			Decoder Discriminator
-
-			Each model has a data-parallelization module which accepts a list of GPU IDs
-
-	train_modules/
-		Definitions for training schemas
-
-		aaegan_train2.py is we use now. It is low-memory version of aaegan_train.py
-
-		A general training step is
-			Take steps for the discriminators
-			Take steps for the encoder and decoder
-			Take advarsarial steps for the encoder and decoder WRT the discriminators
-
-	data_providers/
-		Definitions for DataProvider objects i.e. loading data into pytorch tensors
-
-		DataProvider3D.py is what we use now. 
-
-
-			
+### Observations
+	run_docker_pyt3.sh - runs fine
+	run_docker_master.sh - runs out of memory
